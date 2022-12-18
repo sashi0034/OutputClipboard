@@ -23,7 +23,7 @@ namespace OutputClipboard.Views
         {
             InitializeComponent();
 
-            Util.CloseWindowDelayed(this);
+            Util.StartPerformPopup(this);
         }
     }
 }
