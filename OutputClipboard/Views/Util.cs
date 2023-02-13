@@ -45,8 +45,8 @@ namespace OutputClipboard.Views
             var ms = data.GetData("DeviceIndependentBitmap") as System.IO.MemoryStream;
             if (ms == null) return null;
 
-            //DeviceIndependentBitmapのbyte配列の15番目がbpp、
-            //これが32未満ならBgr32へ変換、これでアルファの値が0でも255扱いになって表示される
+            // DeviceIndependentBitmapのbyte配列の15番目がbpp、
+            // これが32未満ならBgr32へ変換、これでアルファの値が0でも255扱いになって表示される
             byte[] dib = ms.ToArray();
             if (dib[14] < 32)
             {

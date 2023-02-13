@@ -143,7 +143,7 @@ namespace OutputClipboard.Views
             using (FileStream stream = new FileStream(path, FileMode.Create))
             {
                 ImageSource source = image;
-                BmpBitmapEncoder encoder = new BmpBitmapEncoder();
+                var encoder = new PngBitmapEncoder();
                 encoder.Frames.Add(BitmapFrame.Create((BitmapSource)source));
                 encoder.Save(stream);
             }
